@@ -551,3 +551,16 @@ align-items: start;
 }
 
 /*fin footer*/
+
+/*login*/
+.login {
+  padding-top: 5%;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-bottom: 10%;
+
+}
+
+.form-floating {
+  padding-top: 2%;
+}
