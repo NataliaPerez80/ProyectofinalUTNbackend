@@ -1,5 +1,81 @@
 <div class="containerNov">
+
     <div class="row">
-        <p> Hola {{ persona }} ! <a class="btn btn-sm btn-danger" href="/admin/login/logout"> Cerrar sesion  <i class= "fas fa-sign-out-alt"> </i> </a> </p>
+        <p> Hola {{ persona }} ! <a class="btn btn-sm btn-danger" href="/admin/login/logout"> Cerrar sesion <i
+                    class="fas fa-sign-out-alt"> </i> </a> </p>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="col-12  text-end">
+                        <a class="btn btn-info" href="#"><i class="fa fa-plus" aria-hidden="true"> </i>
+                            Nuevo</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Editar Blog
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="col-12  text-end">
+                        <a class="btn btn-info" href="/admin/novedades/agregar"><i class="fa fa-plus" aria-hidden="true"> </i>
+                            Nuevo</button></a>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th class="col text-center">Titulo</th>
+                                <th class="col text-center">Imagen</th>
+                                <th class="col text-end">Acciones</th>
+                            </tr>
+                        </thead>   
+                        <tbody>
+                            {{#each novedades}}
+                            <tr>
+                                <th scope="row">{{id}}</th>
+                                <td class="text-center">{{titulo}}</td>
+                                <td class="text-center">{{{imagen}}}</td>
+                                <td class="text-end"><a calss="btn btn-secundary" href="/admin/novedades/modificar/{{id}}"> <i class="fa fa-pencil"
+                                            aria-hidden="true"> </i></a> <a calss="btn btn-secundary" href="/admin/novedades/eliminar/{{id}}"> <i
+                                            class="fa fa-trash" aria-hidden="true"> </i></td>
+                            </tr>
+                           {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Editar Servicios
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="col-12  text-end">
+                        <a class="btn btn-info" href="#"><i class="fa fa-plus" aria-hidden="true"> </i>
+                            Nuevo</button></a>
+                    </div>
+                    Placeholder content for this accordion, which is intended to demonstrate the
+                    <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the space to make it look, at least at first
+                    glance, a bit more representative of how this would look in a real-world application.
+                </div>
+            </div>
+        </div>
     </div>
 </div>

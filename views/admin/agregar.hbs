@@ -1,0 +1,29 @@
+<div class="containerlogin">
+  <div class="row">
+    <h4>Agregar una novedad</h4>
+    <form action="/admin/novedades/agregar" method="post"
+    enctype= "multipart/form-data">
+    
+      <div class="form-floating md 3">
+        <input type="text" class="form-control" id="inputTitulo" placeholder="Titulo" name="titulo">
+        <label for="inputUser">Titulo</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="inputSubtitulo" placeholder="Subtitulo" name="subtitulo">
+        <label for="inputPassword">Subtitulo</label>
+      </div>
+      <div class="">
+        <label for="imagen">Imagen</label>
+        <input type="file" class="form-control" id="imagen" placeholder="Imagen" name="imagen">
+      </div>
+<div class="form-floating">
+        <input type="text" class="form-control" id="inputCuerpo" placeholder="Cuerpo" name="cuerpo">
+        <label for="inputPassword">Cuerpo</label>
+      </div>
+      <button type="submit" class="button">Guardar</button>
+    </form>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+  </div>
+</div>
